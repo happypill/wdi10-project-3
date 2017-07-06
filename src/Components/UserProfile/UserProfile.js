@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 
-export class UserProfile extends Components {
+import './UesrProfile.css';
+
+export class UserProfile extends Component {
   render() {
     return (<div>MyComponent</div>);
   }

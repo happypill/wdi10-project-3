@@ -1,6 +1,6 @@
-import React, {PropTypes} from 'react';
+import React, {Component, PropTypes} from 'react';
 
-export default class MyComponent extends React.Component {
+export class EventDetails extends Components {
   constructor(props) {
     super(props);
   }

@@ -1,6 +1,8 @@
-import React, {PropTypes} from 'react';
+import React, {Component, PropTypes} from 'react';
 
-export default class MyComponent extends React.Component {
+import './Event.css';
+
+export default class MyComponent extends Component {
   constructor(props) {
     super(props);
   }
