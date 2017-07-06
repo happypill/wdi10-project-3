@@ -1,10 +1,7 @@
-import React, {PropTypes} from 'react';
+import React, {Component} from 'react';
 
-export default class MyComponent extends React.Component {
+export class UserProfile extends Components {
   render() {
     return (<div>MyComponent</div>);
   }
 }
-
-.propTypes = {
-};
