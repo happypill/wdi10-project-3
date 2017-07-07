@@ -1,10 +1,9 @@
-import React, {PropTypes} from 'react';
+import React, {Component} from 'react';
 
-export default class MyComponent extends React.Component {
+import './UesrProfile.css';
+
+export class UserProfile extends Component {
   render() {
     return (<div>MyComponent</div>);
   }
 }
-
-.propTypes = {
-};
