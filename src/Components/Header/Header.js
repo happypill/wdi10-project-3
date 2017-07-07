@@ -4,7 +4,10 @@ import {connect} from 'react-redux';
 import './Header.css';
 
 
-class Header extends Component {
+export class Header extends Component {
+  constructor(props){
+    super(props)
+  }
   render() {
     return (
       <div className="row header">
@@ -24,4 +27,18 @@ class Header extends Component {
     );
   }
 }
-export default Header;
+
+const mapStateToProps = (state) => {
+    return {
+
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+
+  }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

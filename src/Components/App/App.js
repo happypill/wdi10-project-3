@@ -1,64 +1,36 @@
-// import React, { Component } from 'react';
-// import {BrowserRouter as Router, Route, Redirect,Switch} from 'react-router-dom'
-//
-//
-// import Header from "../Header/Header";
-//
-//
-// import './App.css';
-//
-// class App extends Component {
-//   render() {
-//     return (
-//      <Router>
-//         <Switch>
-//           <Route exact path="/" component={Header}/>
-//         </Switch>
-//       </Router>
-//     );
-//   }
-// }
-//
-// export default App;
-
 import React, { Component } from 'react';
+import connect from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Redirect,
+  Switch,
+} from 'react-router-dom';
 
-import CarList from './Components/CarList/CarList';
-import Sidebar from './Components/Sidebar/Sidebar';
-import Header from './Components/Header/Header';
+import Login from '../Login/Login';
+import Home from '../Home/Home'
 
-import logo from './logo.svg';
+
 import './App.css';
 
 class App extends Component {
-  constructor(props){
-    super(props);
-
-    this.state = {
-      activeCar: ""
-    }
-  }
-
-
-  setActiveCar = (id) => {
-
-    console.log("Active car: ", id);
-
-    this.setState({
-      activeCar: id
-    })
-  }
-
   render() {
     return (
-      <Router>
+     <Router>
         <Switch>
-          <Route exact path="/" component={Home}/>
-          <Route path="/Login/:id" component={Login}/>
+          <Route exact path="/" components={Login}/>
+          <Route exact path="/home" component={Home}/>
         </Switch>
       </Router>
     );
   }
 }
+
+
+// <Route exact path="/home" component={Home}/>
+// <Route exact path="/room/:id" component={Room}/>
+// <Route exact path="/profile" component={Profile}/>
+// <Route exact path="/logout" component={Logout}/>
+
 
 export default App;

@@ -1,16 +1,28 @@
 import React, {Component, PropTypes} from 'react';
+import { connect } from 'react-redux';
 
 import './Event.css';
 
-export default class MyComponent extends Component {
+export class Event extends Component {
   constructor(props) {
     super(props);
   }
 
   render() {
-    return (<div>MyComponent</div>);
+    return (<div>Event</div>);
   }
 }
 
-.propTypes = {
-};
+const mapStateToProps = (state) => {
+    return {
+
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    // nothing to see here...
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Event);

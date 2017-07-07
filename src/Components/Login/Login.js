@@ -1,14 +1,38 @@
-import React, {PropTypes} from 'react';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 
-export default class MyComponent extends React.Component {
-  constructor(props) {
-    super(props);
+
+import Footer from '../Footer/Footer';
+import './Login.css';
+
+
+export class Login extends Component { // eslint-disable-line react/prefer-stateless-function
+
+  constructor(props){
+    super(props)
+    
   }
 
   render() {
-    return (<div>MyComponent</div>);
+
+    return (
+      <div>
+
+      </div>
+    );
   }
 }
 
-.propTypes = {
-};
+const mapStateToProps = (state) => {
+    return {
+
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
