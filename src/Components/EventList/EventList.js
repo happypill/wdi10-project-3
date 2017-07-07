@@ -7,6 +7,7 @@ export class EventList extends Component { // eslint-disable-line react/prefer-s
   render() {
     return (
       <div>MY COMPONENT</div>
+      
     );
   }
 }
