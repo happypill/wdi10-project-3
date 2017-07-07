@@ -1,14 +1,19 @@
 import React, {PropTypes} from 'react';
 
-export default class MyComponent extends React.Component {
+export default class EventDetails extends React.Component {
   constructor(props) {
     super(props);
+    this.state ={
+      activeEvent:{}
+    }
   }
 
   render() {
-    return (<div>MyComponent</div>);
+    return (
+        <h1>EventDetails</h1>
+
+
+
+    );
   }
 }
-
-.propTypes = {
-};

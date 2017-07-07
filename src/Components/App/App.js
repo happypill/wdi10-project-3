@@ -1,22 +1,29 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Route, Redirect,Switch} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Redirect,IndexRoute,Switch} from 'react-router-dom'
 
-
-import Header from "../Header/Header";
-
+//Import Components
+import Events from "../Event/Event";
 
 import './App.css';
+
+
 
 class App extends Component {
   render() {
     return (
-     <Router>
-        <Switch>
-          <Route exact path="/" component={Header}/>
-        </Switch>
-      </Router>
+      <Router>
+         <Switch>
+             <Route path="/" component={Events}/>
+         </Switch>
+       </Router>
     );
   }
 }
+
+// function mapStateToProps(state) {
+//   return {
+//
+//   };
+// }
 
 export default App;

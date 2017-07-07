@@ -1,14 +1,37 @@
 import React, {PropTypes} from 'react';
+import { connect } from 'react-redux';
 
-export default class MyComponent extends React.Component {
+//Import Component
+
+import Header from "../Header/Header";
+
+class Events extends React.Component {
   constructor(props) {
     super(props);
   }
 
+
   render() {
-    return (<div>MyComponent</div>);
+    return (
+
+     <div>
+          <Header/>
+          <h1>Test</h1>
+    </div>
+    );
   }
 }
-
-.propTypes = {
-};
+// const mapStateToProps = (state) => {
+//   return {
+//      <div><h1>Test</h1></div>
+//   }
+// }
+//
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//   <div><h1>Test</h1></div>
+//   }
+// }
+//
+// export default connect(mapStateToProps,mapDispatchToProps)(Events);
+export default Events;
