@@ -7,6 +7,11 @@ class Header extends Component {
   render() {
     return (
       <div className="row header">
+        <div className="col-sm-offset-5 col-sm-2 homebutton">
+          <button type="button" className="btn btn-default btn-lg" href="/">BRACE</button>
+        </div>
+      </div>
+      <div className="row header">
         <div className="col-sm-2">
         </div>
         <div className="col-sm-8">

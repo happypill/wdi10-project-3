@@ -23,9 +23,10 @@
 
 import React, { Component } from 'react';
 
-import CarList from './Components/CarList/CarList';
+import EventList from './Components/EventList/EventList';
 import Sidebar from './Components/Sidebar/Sidebar';
 import Header from './Components/Header/Header';
+import EventDetails from './Components/EventDetails/EventDetails';
 
 import logo from './logo.svg';
 import './App.css';
@@ -35,17 +36,23 @@ class App extends Component {
     super(props);
 
     this.state = {
-      activeCar: ""
+      activeEvent: ""
     }
   }
 
+  //
+  // componentDidMount() {
+  //   document.addEvventListener("DOMContentLoaded", () => {
+  //
+  //   })
+  // }
 
-  setActiveCar = (id) => {
+  setActiveEvent = (id) => {
 
-    console.log("Active car: ", id);
+    console.log("Active event: ", id);
 
     this.setState({
-      activeCar: id
+      activeEvent: id
     })
   }
 

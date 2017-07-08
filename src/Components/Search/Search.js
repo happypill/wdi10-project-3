@@ -1,6 +1,6 @@
-import React, {PropTypes} from 'react';
+import React, {Component, PropTypes} from 'react';
 
-export default class MyComponent extends React.Component {
+export class Search extends Component {
   constructor(props) {
     super(props);
   }
@@ -10,5 +10,4 @@ export default class MyComponent extends React.Component {
   }
 }
 
-.propTypes = {
-};
+export default Search;

@@ -12,5 +12,4 @@ export default class MyComponent extends Component {
   }
 }
 
-.propTypes = {
-};
+export default Event;

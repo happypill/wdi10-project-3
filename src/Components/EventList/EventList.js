@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import axios from 'axios';
 
-import CarListView from '../Event/Event';
+import Event from '../Event/Event';
 
 
 import './EventList.css';

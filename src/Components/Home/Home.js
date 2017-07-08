@@ -9,6 +9,3 @@ export default class MyComponent extends React.Component {
     return (<div>MyComponent</div>);
   }
 }
-
-.propTypes = {
-};

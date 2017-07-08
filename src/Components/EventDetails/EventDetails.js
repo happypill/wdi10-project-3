@@ -1,5 +1,8 @@
 import React, {Component, PropTypes} from 'react';
 
+import Attendees from './Components/Attendees/Attendees';
+
+
 export class EventDetails extends Components {
   constructor(props) {
     super(props);
@@ -10,5 +13,4 @@ export class EventDetails extends Components {
   }
 }
 
-.propTypes = {
-};
+export default EventDetails;
