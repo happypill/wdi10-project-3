@@ -3,13 +3,13 @@ import thunk from 'redux-thunk';
 
 
 
-import CarReducer from '../Reducers/eventReducer'
+import EventReducer from '../Reducers/eventReducer'
 
 export let initStore = () => {
 
   const reducer = combineReducers({
-   //add Reducer
-    event: CarReducer
+   //add Reducers
+    event: EventReducer
 
   });
 
