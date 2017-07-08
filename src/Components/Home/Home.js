@@ -17,22 +17,13 @@ export  class Home extends React.Component {
 
   render() {
     return (
-         
-      <div className="row container-fluid">
-
-
+       <div className="row container-fluid">
         <Header/>
-
-        <div className= "col-sm-12 eventListContainer">
-            <EventList/>
-          </div>
-
-
-      </div>
-
-
-
-
+        <EventList/>
+        <div>
+        <Footer/>
+        </div>
+     </div>
     );
   }
 }

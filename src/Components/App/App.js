@@ -18,8 +18,7 @@ class App extends Component {
     return (
      <Router>
         <Switch>
-          <Route exact path="/" components={Login}/>
-          <Route exact path="/home" component={Home}/>
+          <Route exact path="/" component={Home}/>
         </Switch>
       </Router>
     );
@@ -27,10 +26,6 @@ class App extends Component {
 }
 
 
-// <Route exact path="/home" component={Home}/>
-// <Route exact path="/room/:id" component={Room}/>
-// <Route exact path="/profile" component={Profile}/>
-// <Route exact path="/logout" component={Logout}/>
 
 
 export default App;
