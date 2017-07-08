@@ -2,10 +2,15 @@ import { createStore, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 
 
+
+import CarReducer from '../Reducers/eventReducer'
+
 export let initStore = () => {
 
   const reducer = combineReducers({
    //add Reducer
+    event: CarReducer
+
   });
 
   const store = createStore( reducer, 
