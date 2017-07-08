@@ -10,5 +10,3 @@ export class EventDetails extends Components {
   }
 }
 
-.propTypes = {
-};
