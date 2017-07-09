@@ -35,7 +35,7 @@ const TOKEN= '';
 export function selectEvent(event) {
   return {
     type: EVENT_SELECTED,
-    payload: event
+    payload: event,
   };
 }
 
@@ -52,9 +52,10 @@ export const FETCH_VENUE=(event)=>{
       event
    }
 }
-export const EVENT_SELCTED=(event)=>{
+export const EVENT_SELECTED=(event)=>{
    return{
       type:"EVENT_SELECTED",
       event
    }
 }
+

@@ -32,9 +32,6 @@ export class Search extends Component {
   // }
 
   render() {
-    //BELOW LINE IS FOR TESTING
-    // this.props.fetchEvents('London');
-
     return (
       <div id="search-bar">
       <form onSubmit="" className="input-group">

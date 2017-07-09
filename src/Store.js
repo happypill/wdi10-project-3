@@ -1,15 +1,14 @@
-import { createStore, compose, combineReducers } from 'redux'; 
+import { createStore, compose, combineReducers} from 'redux'; 
 import thunk from 'redux-thunk';
 
 
 
-import EventReducer from '../Reducers/eventReducer'
+
 
 export let initStore = () => {
 
   const reducer = combineReducers({
-   //add Reducers
-    event: EventReducer
+  
 
   });
 
@@ -20,3 +19,5 @@ export let initStore = () => {
 
   return store;
 }
+
+export default initStore;
