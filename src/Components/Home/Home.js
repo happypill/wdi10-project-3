@@ -8,6 +8,7 @@ import { Button, ButtonToolbar, Col ,Row,Grid} from 'react-bootstrap';
 
 import EventMain from '../Events/EventMain'
 import SideBar from '../Sidebar/Sidebar'
+import SearchBar from '../Search/Search'
 
 import './Home.css';
 
@@ -20,10 +21,16 @@ export  class Home extends React.Component {
   render() {
     return (
       <Grid>
-        <Row className="show-grid">
-          <Col xs={12} md={8}><EventMain/></Col> 
-          <SideBar/>
-      </Row>
+
+        <Col className="show-grid">
+          <Col xs={9} md={8}><EventMain/>    
+            <Row className="show-grid">
+             <SearchBar/>
+            </Row>
+          </Col> 
+         <Col xs={3} md={4} xsOffset={12}><SideBar/></Col> 
+      </Col>
+
       </Grid>
     );
   }
