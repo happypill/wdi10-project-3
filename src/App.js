@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+
+//Redux
 import initStore from './Store';
 import { Provider } from 'react-redux';
 import {HashRouter, Link} from 'react-router-dom';
-import { Button, Grid } from 'react-bootstrap';
+
+
+import { Button, Navbar, NavItem, Nav, Grid } from 'react-bootstrap';
 import Main from './Routes';
+import navComponent from './Components/Nav/Nav';
 
 
+const store = initStore();
+
+store.subscribe(()=>{
+    const state = store.getState();
+})
 
 class App extends Component {
   render() {
@@ -15,7 +25,7 @@ class App extends Component {
       <Provider store={initStore()}>
       <div>
         <div >
- 
+          <navComponent/>
 
         </div>
         <Grid>
