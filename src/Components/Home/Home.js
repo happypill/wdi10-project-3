@@ -1,11 +1,13 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import { Button, ButtonToolbar, Col ,Row,Grid} from 'react-bootstrap';
 
 //Import Child Compoonents
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
 
-import EventList from '../EventList/EventList'
+
+
+import EventMain from '../Events/EventMain'
+import SideBar from '../Sidebar/Sidebar'
 
 import './Home.css';
 
@@ -17,13 +19,12 @@ export  class Home extends React.Component {
 
   render() {
     return (
-       <div className="row container-fluid">
-        <Header/>
-        <EventList/>
-        <div>
-        <Footer/>
-        </div>
-     </div>
+      <Grid>
+        <Row className="show-grid">
+          <Col xs={12} md={8}><EventMain/></Col> 
+          <SideBar/>
+      </Row>
+      </Grid>
     );
   }
 }
