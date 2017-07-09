@@ -9,19 +9,41 @@ Any Events type , you add it here. This is just a container
 */
 
 
-import React, {PropTypes} from 'react';
-import {connect} from 'react-redux';
+
+
+import React, { Component } from 'react';
+import  { connect } from 'react-redux';
+
+import Header from '../containers/header';
+import SearchBar from '../Search/Search'
 import EventList from './EventList'
 import Sidebar from '../Sidebar/Sidebar'
 
-const EventMain = (props) => (
-<div>
-  <EventList events={props.events || []}/>
-</div>
-);
+class EventMain extends Component {
 
-const mapStateToProps = (state) => {
-    return state;
+  renderEventsView() {
+    const event = this.props.activeEvent;
+
+    if (event !== null) {
+      return <EventDetail />
+    }
+    return <EventList />
+  }
+
+  render() {
+    return (
+        <div id="eventsView">
+          {this.renderEventsView()}
+          </div>
+    );
+  }
+}
+
+function mapStateToProps(state) {
+  return {
+    events: state.events,
+    activeEvent: state.activeEvent,
+  };
 }
 
 export default connect(mapStateToProps)(EventMain);

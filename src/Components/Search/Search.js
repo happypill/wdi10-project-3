@@ -2,11 +2,13 @@ import React, {PropTypes} from 'react';
 import { Component } from 'react';
 import {connect} from 'react-redux';
 import { bindActionCreators } from 'redux';
-// import {fetchEvents } from '../Actions/search';
+import {fetchEvents } from './Action/search';
+import {selectEvent } from './Action/search';
+
 
 
 export class Search extends Component {
-  constructor(props) {
+ constructor(props) {
     super(props);
 
     this.state = {
@@ -15,21 +17,21 @@ export class Search extends Component {
       activeEvent: {}
     };
 
-    // this gives onInputChange to ability to use this (i.e SearchBar instance)
-    // this.onInputChange = this.onInputChange.bind(this);
-    // this.onFormSubmit = this.onFormSubmit.bind(this);
+    this.onInputChange = this.onInputChange.bind(this);
+    this.onFormSubmit = this.onFormSubmit.bind(this);
   }
 
-  // onInputChange(event) {
-  //   this.setState({ term: event.target.value });
-  // }
+  onInputChange(event) {
+    this.setState({ term: event.target.value });
+  }
 
-  // onFormSubmit(event) {
-  //   event.preventDefault();
+  onFormSubmit(event) {
+    event.preventDefault();
     
-  //   this.props.fetchEvents(this.state.term);
-  //   this.props.selectEvent(null)
-  // }
+    this.props.fetchEvents(this.state.term);
+    this.props.selectEvent(null)
+  }
+
 
   render() {
     return (
