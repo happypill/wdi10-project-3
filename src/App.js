@@ -13,12 +13,6 @@ import Main from './Routes';
 import navComponent from './Components/Nav/Nav';
 
 
-const store = initStore();
-
-store.subscribe(()=>{
-    const state = store.getState();
-})
-
 class App extends Component {
   render() {
     return (

@@ -85,6 +85,11 @@ export class Login extends Component { // eslint-disable-line react/prefer-state
     window.location.href = "/auth/facebook";
   }
 
+  googleLogin = (e) => {
+    e.preventDefault();
+    window.location.href = "/auth/google";
+  }
+
   render() {
     return (
       <div className="login">
@@ -118,6 +123,10 @@ export class Login extends Component { // eslint-disable-line react/prefer-state
           <button type="submit"
                   className="btn btn-primary facebook"
                   onClick={this.facebookLogin}>Login with Facebook</button>
+          <div className="or">or</div>
+          <button type="submit"
+                  className="btn btn-primary google"
+                  onClick={this.facebookLogin}>Login with Google</button>
         </form>
       </div>
     );
