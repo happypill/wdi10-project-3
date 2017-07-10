@@ -14,10 +14,11 @@ Any Events type , you add it here. This is just a container
 import React, { Component } from 'react';
 import  { connect } from 'react-redux';
 
-import Header from '../containers/header';
+// import Header from '../containers/header';
 import SearchBar from '../Search/Search'
 import EventList from './EventList'
 import Sidebar from '../Sidebar/Sidebar'
+import EventDetail from './EventDetail'
 
 class EventMain extends Component {
 

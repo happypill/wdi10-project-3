@@ -10,7 +10,7 @@ import {HashRouter, Link} from 'react-router-dom';
 
 import { Button, Navbar, NavItem, Nav, Grid } from 'react-bootstrap';
 import Main from './Routes';
-import navComponent from './Components/Nav/Nav';
+import navBarInstance from './Components/Nav/Nav';
 
 
 const store = initStore();
@@ -24,15 +24,8 @@ class App extends Component {
     return (
       <Provider store={initStore()}>
       <div>
-        <div >
-          <navComponent/>
-
-        </div>
-        <Grid>
-        <Main>
-          All routes will be link to here
-        </Main>
-        </Grid>
+        <navBarInstance/>
+        <Main />
       </div>
       </Provider>
     );

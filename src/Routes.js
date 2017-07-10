@@ -11,7 +11,7 @@ import {Switch, Route} from 'react-router-dom';
 const Main = () => (
 
   <Switch>
-    <Route path = '/' component = {Home}></Route>
+    <Route exact path = '/' component = {Home}></Route>
     <Route path = '/login' component = {Login}></Route>
     <Route path = '/event/{event:id}' component = {EventDetails}></Route>
   </Switch>
