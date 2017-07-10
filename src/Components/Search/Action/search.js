@@ -34,3 +34,10 @@ export function fetchVenue(venue_id) {
     payload: request
   };
 }
+
+export function selectEvent(event) {
+  return {
+    type: EVENT_SELECTED,
+    payload: event,
+  };
+}
