@@ -32,7 +32,7 @@ class Header extends Component {
           <Navbar.Brand>
             <a href="#"><Link to='/'>BRACE</Link></a>
           </Navbar.Brand>
-          <Navbar.Toggle />
+          <Navbar.Toggle/>
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav>
@@ -40,15 +40,10 @@ class Header extends Component {
             <NavItem eventKey={2} href="#"><Link to='/Login'>Login / Signup</Link></NavItem>
             <NavItem eventKey={2} href="#"><Link to='/EventForm'>EventForm</Link></NavItem>
             <NavItem eventKey={2} href="#"><Link to='/EventDetail'>EventDetail</Link></NavItem>
+            <NavItem type="button" className="btn btn-danger pull-right"
+                    onClick={ this.logout }>Logout</NavItem>
           </Nav>
         </Navbar.Collapse>
-        <Navbar.Footer>
-          <Nav>
-          <button type="button"
-                  className="btn btn-danger pull-right"
-                  onClick={ this.logout }>Logout</button>
-          </Nav>
-        </Navbar.Footer>
       </Navbar>
 
     )
