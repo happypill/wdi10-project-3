@@ -1,0 +1,16 @@
+
+.Header {
+    height: 100px;
+    position: relative;
+    padding-top: 50px;
+    color: rgb(48, 195, 89)
+}
+
+.navbar {
+    background-color: #F8F8F8;
+    border-color: #E7E7E7;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #5E5E5E;
+}

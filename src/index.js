@@ -3,7 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import {HashRouter} from 'react-router-dom';
+// Redux
+import { Provider } from 'react-redux';   
+import { initStore } from './Store'; 
 
-ReactDOM.render(<HashRouter><App /></HashRouter>, document.getElementById('root'));
+const store = initStore();
+
+
+
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+  , document.getElementById('root'));
 registerServiceWorker();
+
