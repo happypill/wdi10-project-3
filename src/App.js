@@ -9,7 +9,6 @@ import './App.css';
 
 //Redux
 import { Button, Navbar, NavItem, Nav, Grid } from 'react-bootstrap';
-import navComponent from './Components/Nav/Nav';
 
 //Import from components
 import Home from './Components/Home/Home';
