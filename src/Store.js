@@ -2,7 +2,7 @@ import { createStore, compose, combineReducers} from 'redux';
 import thunk from 'redux-thunk';
 
 
-import SearchReducer from './Components/Search/Reducer/searchReducer';
+import SearchReducer from './Reducers/searchReducer';
 
 
 export let initStore = () => {

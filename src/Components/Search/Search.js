@@ -1,9 +1,10 @@
 import React, {PropTypes} from 'react';
 import { Component } from 'react';
 import {connect} from 'react-redux';
+import { Button, ButtonToolbar, Col ,Row,Grid} from 'react-bootstrap';
 import { bindActionCreators } from 'redux';
-import {fetchEvents } from './Action/search';
-import {selectEvent } from './Action/search';
+import {fetchEvents} from '../../Actions/search';
+import {selectEvent} from '../../Actions/search';
 
 
 
@@ -19,8 +20,7 @@ export class Search extends Component {
 
     this.onInputChange = this.onInputChange.bind(this);
     this.onFormSubmit = this.onFormSubmit.bind(this);
-  }
-
+  } 
   onInputChange(event) {
     this.setState({ term: event.target.value });
   }
@@ -36,7 +36,7 @@ export class Search extends Component {
   render() {
     return (
       <div id="search-bar">
-      <form onSubmit="" className="input-group">
+      <form onSubmit="" className="input-group"onSubmit={(e) => this.onFormSubmit(e) }>
         <input
           placeholder="Search for events"
           className="form-control"
@@ -53,13 +53,13 @@ export class Search extends Component {
 
 function mapStateToProps(state) {
   return {
-    // events: state.events,
-    // activeEvent: state.activeEvent
+    events: state.events,
+    activeEvent: state.activeEvent
   };
 }
 
-function mapDispatchToProps() {
-  return bindActionCreators({  });
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ fetchEvents, selectEvent }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Search);
