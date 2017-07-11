@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import './Login.css';
-
+import Header from '../Header/header'
 /**
  * Login
  */
@@ -92,6 +92,11 @@ export class Login extends Component { // eslint-disable-line react/prefer-state
 
   render() {
     return (
+      <div>
+               <Header/>
+        <br/>
+        <br/>
+        <br/>
       <div className="login">
         <form>
           <div className="error">{this.state.error}</div>
@@ -129,6 +134,7 @@ export class Login extends Component { // eslint-disable-line react/prefer-state
                   onClick={this.facebookLogin}>Login with Google</button>
         </form>
       </div>
+     </div>
     );
   }
 }

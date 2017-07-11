@@ -28,9 +28,165 @@ export  class Home extends React.Component {
           <SearchBar/>
             <Grid>
               <Row>
-                <h1>WELCOME</h1>
-                <hr/>
-                <p>THIS IS A EVENT PAGE </p>
+               <div className="col-lg-3 col-md-3 col-sm-5 col-lg-push-1 col-md-push-1 ">
+                <span>
+                  <h3>fdfd</h3>
+                  <h4>fdfdfd</h4>
+                  <div className="event">
+                    <h5>Event </h5>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                  </div>
+                  <hr className="event-footer-line"/>
+                  <div className="row">
+                    <div className="col-md-6 col-sm-6">
+                    </div>
+                    <div className="col-md-6 col-sm-6">
+                      <button className="btn btn-success ">
+                        Join
+                      </button>
+                    </div>
+                  </div>
+                </span>
+              </div>
+                <div className="col-lg-3 col-md-3 col-sm-5 col-lg-push-1 col-md-push-1 ">
+                <span>
+                  <h3>fdfd</h3>
+                  <h4>fdfdfd</h4>
+                  <div className="event">
+                    <h5>Event </h5>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                  </div>
+                  <hr className="event-footer-line"/>
+                  <div className="row">
+                    <div className="col-md-6 col-sm-6">
+                    </div>
+                    <div className="col-md-6 col-sm-6">
+                      <button className="btn btn-success ">
+                        Join
+                      </button>
+                    </div>
+                  </div>
+                </span>
+              </div>
+               <div className="col-lg-3 col-md-3 col-sm-5 col-lg-push-1 col-md-push-1 ">
+                <span>
+                  <h3>fdfd</h3>
+                  <h4>fdfdfd</h4>
+                  <div className="event">
+                    <h5>Event </h5>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                  </div>
+                  <hr className="event-footer-line"/>
+                  <div className="row">
+                    <div className="col-md-6 col-sm-6">
+                    </div>
+                    <div className="col-md-6 col-sm-6">
+                      <button className="btn btn-success ">
+                        Join
+                      </button>
+                    </div>
+                  </div>
+                </span>
+              </div>
+               <div className="col-lg-3 col-md-3 col-sm-5 col-lg-push-1 col-md-push-1 ">
+                <span>
+                  <h3>fdfd</h3>
+                  <h4>fdfdfd</h4>
+                  <div className="event">
+                    <h5>Event </h5>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                  </div>
+                  <hr className="event-footer-line"/>
+                  <div className="row">
+                    <div className="col-md-6 col-sm-6">
+                    </div>
+                    <div className="col-md-6 col-sm-6">
+                      <button className="btn btn-success ">
+                        Join
+                      </button>
+                    </div>
+                  </div>
+                </span>
+              </div>
+               <div className="col-lg-3 col-md-3 col-sm-5 col-lg-push-1 col-md-push-1 ">
+                <span>
+                  <h3>fdfd</h3>
+                  <h4>fdfdfd</h4>
+                  <div className="event">
+                    <h5>Event </h5>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                  </div>
+                  <hr className="event-footer-line"/>
+                  <div className="row">
+                    <div className="col-md-6 col-sm-6">
+                    </div>
+                    <div className="col-md-6 col-sm-6">
+                      <button className="btn btn-success ">
+                        Join
+                      </button>
+                    </div>
+                  </div>
+                </span>
+              </div>
+               <div className="col-lg-3 col-md-3 col-sm-5 col-lg-push-1 col-md-push-1 ">
+                <span>
+                  <h3>fdfd</h3>
+                  <h4>fdfdfd</h4>
+                  <div className="event">
+                    <h5>Event </h5>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                  </div>
+                  <hr className="event-footer-line"/>
+                  <div className="row">
+                    <div className="col-md-6 col-sm-6">
+                    </div>
+                    <div className="col-md-6 col-sm-6">
+                      <button className="btn btn-success ">
+                        Join
+                      </button>
+                    </div>
+                  </div>
+                </span>
+              </div>
+               <div className="col-lg-3 col-md-3 col-sm-5 col-lg-push-1 col-md-push-1 ">
+                <span>
+                  <h3>fdfd</h3>
+                  <h4>fdfdfd</h4>
+                  <div className="event">
+                    <h5>Event </h5>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                  </div>
+                  <hr className="event-footer-line"/>
+                  <div className="row">
+                    <div className="col-md-6 col-sm-6">
+                    </div>
+                    <div className="col-md-6 col-sm-6">
+                      <button className="btn btn-success ">
+                        Join
+                      </button>
+                    </div>
+                  </div>
+                </span>
+              </div> <div className="col-lg-3 col-md-3 col-sm-5 col-lg-push-1 col-md-push-1 ">
+                <span>
+                  <h3>fdfd</h3>
+                  <h4>fdfdfd</h4>
+                  <div className="event">
+                    <h5>Event </h5>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                  </div>
+                  <hr className="event-footer-line"/>
+                  <div className="row">
+                    <div className="col-md-6 col-sm-6">
+                    </div>
+                    <div className="col-md-6 col-sm-6">
+                      <button className="btn btn-success ">
+                        Join
+                      </button>
+                    </div>
+                  </div>
+                </span>
+              </div>
               </Row>
             </Grid>
 
