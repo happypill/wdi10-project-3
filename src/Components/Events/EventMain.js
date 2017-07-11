@@ -21,8 +21,7 @@ class EventMain extends Component {
     super(props);
 
     this.state = {
-      library: [],
-      filtered: []
+
     }
   }
 

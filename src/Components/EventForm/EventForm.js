@@ -9,7 +9,6 @@ export  class EventForm extends React.Component {
     super(props);
   }
 
-  
   render() {
     return (
       <div>

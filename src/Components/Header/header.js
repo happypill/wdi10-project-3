@@ -12,7 +12,7 @@ class Header extends Component {
   render() {
 
     return (
-      <Navbar bsClass="navbar" fixedTop fluid inverse collapseOnSelect>
+      <Navbar bsClass="navbar" fixedTop fluid collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
             <a href="#"><Link to='/'>BRACE</Link></a>
