@@ -32,6 +32,9 @@ export  class Home extends React.Component {
                 <hr/>
                 <p>THIS IS A EVENT PAGE </p>
               </Row>
+              <Row>
+              <EventMain />
+              </Row>
             </Grid>
 
         </div>

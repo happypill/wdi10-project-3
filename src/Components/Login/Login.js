@@ -131,7 +131,7 @@ export class Login extends Component { // eslint-disable-line react/prefer-state
           <div className="or">or</div>
           <button type="submit"
                   className="btn btn-primary google"
-                  onClick={this.facebookLogin}>Login with Google</button>
+                  onClick={this.googleLogin}>Login with Google</button>
         </form>
       </div>
      </div>
