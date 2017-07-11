@@ -26,23 +26,23 @@ class EventMain extends Component {
   }
 
 
-   componentDidMount() {
-    axios.get('/all')
-    .then((response) => {
-      let arr = response.data;
-      console.log('arr', arr);
-      this.setState({
-        library: arr
-      });
-      console.log("response data", arr);
-      console.log('library it worked', response.status); // ex: 200
-    })
-    .catch(function (error) {
-      console.log(error);
-      console.log('error getting library', error.status);
-    });
+  //  componentDidMount() {
+  //   axios.get('/all')
+  //   .then((response) => {
+  //     let arr = response.data;
+  //     console.log('arr', arr);
+  //     this.setState({
+  //       library: arr
+  //     });
+  //     console.log("response data", arr);
+  //     console.log('library it worked', response.status); // ex: 200
+  //   })
+  //   .catch(function (error) {
+  //     console.log(error);
+  //     console.log('error getting library', error.status);
+  //   });
 
-  }
+  // }
 
   renderEventsView() {
     const event = this.props.activeEvent;
