@@ -1,6 +1,6 @@
-import { EVENT_SELECTED } from '../Action/search';
-import { FETCH_EVENTS } from '../Action/search';
-import { FETCH_VENUE } from '../Action/search';
+import { EVENT_SELECTED } from '../Actions/search';
+import { FETCH_EVENTS } from '../Actions/search';
+import { FETCH_VENUE } from '../Actions/search';
 
 const search =(state=null, action)=>{
   switch (action.type) {

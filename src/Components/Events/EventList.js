@@ -3,7 +3,7 @@ import { Button, ButtonToolbar, Col } from 'react-bootstrap';
 import { bindActionCreators } from 'redux';
 import {connect} from 'react-redux';
 
-import { selectEvent } from './Action/eventActions';
+import {selectEvent} from '../../Actions/search';
 
 
 

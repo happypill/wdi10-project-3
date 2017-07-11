@@ -5,7 +5,6 @@ import { Button, ButtonToolbar, Col ,Row,Grid} from 'react-bootstrap';
 //Import Child Compoonents
 
 
-
 import EventMain from '../Events/EventMain'
 import SideBar from '../Sidebar/Sidebar'
 import SearchBar from '../Search/Search'

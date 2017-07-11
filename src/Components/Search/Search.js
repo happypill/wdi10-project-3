@@ -3,8 +3,8 @@ import { Component } from 'react';
 import {connect} from 'react-redux';
 import { Button, ButtonToolbar, Col ,Row,Grid} from 'react-bootstrap';
 import { bindActionCreators } from 'redux';
-import {fetchEvents } from './Action/search';
-import {selectEvent } from './Action/search';
+import {fetchEvents} from '../../Actions/search';
+import {selectEvent} from '../../Actions/search';
 
 
 
