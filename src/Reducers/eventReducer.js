@@ -16,6 +16,9 @@ const events = (state = {}, action) => {
       break;
     
     case "READ_EVENT":
+        return{
+
+        }
       break;
     case "JOIN_EVENT":
       break;
