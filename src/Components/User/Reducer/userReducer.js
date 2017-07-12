@@ -10,6 +10,9 @@ const userReducer = (state = {}, action) => {
         return action.user || {};
 // default state is being returned even if axios is not working
     case "CREATE_USER":
+        return !user ? error="User already exists" || action.user; 
+
+        }
       break;
 
 // return  default state while axios is running

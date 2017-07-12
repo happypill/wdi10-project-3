@@ -16,12 +16,12 @@ import EventDetail from './EventDetail'
 import Sidebar from '../Sidebar/Sidebar'
 
 class EventMain extends Component {
-   
+
     constructor(props) {
     super(props);
 
     this.state = {
-
+      events: [{name: 'jack'}, {name: 'jill'}, {name: 'hill'}]
     }
   }
 
@@ -48,9 +48,10 @@ class EventMain extends Component {
     const event = this.props.activeEvent;
 
     if (event !== null) {
-      return <EventDetail />
+      // return <EventDetail />
+      return <EventList events={this.state.events}/>
     }
-    return <EventList />
+    return <EventList events={this.state.events}/>
   }
 
   render() {
@@ -58,7 +59,7 @@ class EventMain extends Component {
         <div id="eventsView">
           {this.renderEventsView()}
 
-          </div>
+        </div>
     );
   }
 }

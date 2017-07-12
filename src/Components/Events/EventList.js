@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import {connect} from 'react-redux';
 
 import {selectEvent} from '../../Actions/search';
+import EventView from './EventView'
 
 
 
@@ -13,13 +14,13 @@ class EventList extends Component {
     super(props);
 
     this.state = {
-      events: []
+      events: this.props.events
     };
 
-    this.renderEvents = this.renderEvents.bind(this);
-    this.renderLogo = this.renderLogo.bind(this);
+    // this.renderEvents = this.renderEvents.bind(this);
+    // this.renderLogo = this.renderLogo.bind(this);
   }
-  renderLogo(logo) {
+  renderLogo = (logo) => {
     if (logo !== null) {
       return logo.original.url
     } else {
@@ -28,30 +29,40 @@ class EventList extends Component {
     }
   }
 
+  renderEvents = (event, index) => {
+    console.log('render event')
+    return (
+      <EventView event={event} index={index}/>
+    )
+  }
+
 
   render() {
+    console.log(this.state.events)
+        const events = this.props.events.map(this.renderEvents);
     return (
 
 
    <section id="event-list">
         <div className="container2">
-          {this.props.events.map(this.renderEvents)}
+          {events}
         </div>
       </section>
-        
+
     );
   }
 }
 
-const mapStateToProps = (state) => {
+// const mapStateToProps = (state) => {
+//
+//     return { events: state.events };
+//
+// }
+//
+// function mapDispatchToProps(dispatch) {
+//   return bindActionCreators({ selectEvent: selectEvent }, dispatch)
+// }
+//
+// export default connect(mapStateToProps,mapDispatchToProps)(EventList);
 
-    return { events: state.events };
-    
-}
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ selectEvent: selectEvent }, dispatch)
-}
-
-export default connect(mapStateToProps,mapDispatchToProps)(EventList);
-
+export default EventList

@@ -56,10 +56,11 @@ export class Login extends Component { // eslint-disable-line react/prefer-state
   }
 
   localSignup = (e) => {
+    console.log('hihii');
     e.preventDefault();
     axios.post('/auth/signup', this.state)
       .then( (response) => {
-
+        console.log('ji');
         let data = response.data;
         if(data.error){
           console.log(data.message)
