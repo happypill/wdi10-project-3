@@ -1,19 +1,7 @@
-import React, {Component, PropTypes} from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from 'react';
+import  { connect } from 'react-redux';
 
-import User from '../User/User';
-
-// import { toggleTodo } from '../../Actions/Todo';
-
-import './EventDetails.css';
-
-/**
- * TodoListView
- */
-//export class TodoListView extends Component { // eslint-disable-line react/prefer-stateless-function
-
-
-export class EventDetails extends Component {
+class EventDetails extends Component {
   constructor(props) {
     super(props);
 
@@ -29,7 +17,7 @@ export class EventDetails extends Component {
       return logo.original.url
     } else {
       // placeholder image
-      return ''
+      return 'http://lorempixel.com/400/200/'
     }
   }
 
@@ -43,9 +31,9 @@ export class EventDetails extends Component {
       <div id="detail-view">
         <img src={this.renderLogo(event.logo)}/>
         <div className="event-summary">
-          <h3>{event.name.text}</h3>
-          <p>{event.start.local}</p>
-          <p>Venue id: {event.venue_id}</p>
+          <h2>{event.name.text}</h2>
+          <h4>When: {event.start.local} - {event.end.local}</h4>
+          <h4>Where: {event.venue.text}</h4>
         </div>
         <p>{event.description.text}</p>
       </div>
