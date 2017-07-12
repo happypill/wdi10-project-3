@@ -84,6 +84,7 @@ export class Login extends Component { // eslint-disable-line react/prefer-state
   facebookLogin = (e) => {
     e.preventDefault();
     window.location.href = "/auth/facebook";
+
   }
 
   googleLogin = (e) => {

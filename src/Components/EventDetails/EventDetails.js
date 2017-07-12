@@ -14,58 +14,49 @@ import './EventDetails.css';
 
 
 export class EventDetails extends Component {
-  // constructor(props) {
-  //   super(props);
-  //
-  //   this.state = {
-  //     completed: this.props.todo.completed
-  //   }
-  // }
-  //
-  // onClick = (e) => {
-  //
-  //     const toggle = this.state.completed ? false : true;
-  //     console.log('clicked: ', toggle);
-  //
-  //     this.props.toggleTodo(this.props.todo.id);
-  //
-  //     this.setState( {
-  //       completed: toggle
-  //     });
-  // }
-  //
-  //
-  // render() {
-  //
-  //   const done = this.props.todo.completed ? "done" : "notDone";
-  //
-  //   return (
-  //     <div className="todo"
-  //          onClick={this.onClick}>
-  //          key={this.props.todo.id}
-  //           <div className={done}>
-  //           </div>
-  //           <div className="data">
-  //             <div className="label">{this.props.todo.text}</div>
-  //             <div className="date">2017-07-01 12:12</div>
-  //           </div>
-  //           <div style={{ clear: 'both'}}></div>
-  //     </div>
-  //   );
-  // }
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      activeEvent: {}
+    };
+
+    this.renderLogo = this.renderLogo.bind(this);
+  }
+
+  renderLogo(logo) {
+    if (logo !== null) {
+      return logo.original.url
+    } else {
+      // placeholder image
+      return ''
+    }
+  }
+
+  render() {
+    const event = this.props.activeEvent;
+
+    if (!event ) {
+      return <h1>Event Detail</h1>;
+    }
+    return (
+      <div id="detail-view">
+        <img src={this.renderLogo(event.logo)}/>
+        <div className="event-summary">
+          <h3>{event.name.text}</h3>
+          <p>{event.start.local}</p>
+          <p>Venue id: {event.venue_id}</p>
+        </div>
+        <p>{event.description.text}</p>
+      </div>
+    )
+  }
 }
 
-// const mapStateToProps = (state) => {
-//     return {}
-// }
-//
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     toggleTodo: (id) => { dispatch(toggleTodo(id)); },
-//   }
-// }
-//
-// export default connect(mapStateToProps, mapDispatchToProps)(TodoListView);
-//
+function mapStateToProps(state) {
+  return {
+    activeEvent: state.activeEvent,
+  };
+}
 
-export default EventDetails;
+export default connect(mapStateToProps)(EventDetails);
