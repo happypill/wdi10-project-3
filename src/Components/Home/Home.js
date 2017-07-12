@@ -6,8 +6,6 @@ import { Button, ButtonToolbar, Col ,Row,Grid} from 'react-bootstrap';
 
 
 import EventMain from '../Events/EventMain'
-import SideBar from '../Sidebar/Sidebar'
-import SearchBar from '../Search/Search'
 import Header from '../Header/header'
 
 import './Home.css';
@@ -25,7 +23,6 @@ export  class Home extends React.Component {
           <br/>
           <br/>
           <br/>
-          <SearchBar/>
             <Grid>
               <Row>
                <div className="col-lg-2 col-md-3 col-sm-5  ">

@@ -1,4 +1,4 @@
-import { createStore, compose, combineReducers} from 'redux'; 
+import { createStore, compose, combineReducers, applyMiddleware} from 'redux'; 
 import thunk from 'redux-thunk';
 
 
@@ -14,10 +14,11 @@ export let initStore = () => {
      
   });
 
-  const store = createStore( reducer, 
-    compose(
-    window.devToolsExtension ? window.devToolsExtension() : f => f      // f = dont do anything
-  ) ) 
+   /* Thunk -action creator */
+  const store = createStore(reducer, compose(
+    applyMiddleware(thunk),
+    window.devToolsExtension ? window.devToolsExtension() : f => f,
+  ));
 
   return store;
 }

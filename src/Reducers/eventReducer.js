@@ -1,6 +1,17 @@
+import axios from 'axios';
+//ACTION CREATOR
+const loadEvents = (events) => {
+  return {
+    type: "LOAD_EVENTS",
+    events
+  }
+}
 
 
-//data will be here before any tasks/actions happen. -- will load first
+
+
+
+
 
 const events = (state = {}, action) => {
 
