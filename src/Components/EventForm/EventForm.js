@@ -37,7 +37,7 @@ function setDate(){
 export  class EventForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state =newEventState;
+    this.state=newEventState;
     
    
   }
@@ -57,16 +57,14 @@ export  class EventForm extends React.Component {
      this.props.createEvent(stagedEvent);
  
   }
-  handleChange = (key) => {
-    return (event) => this.setState({
-                   [key]: event.target.value
-            });
-    // let key = e.target.name
-    // let value = e.target.value
-    // console.log(key, ": ", value)
-    // let state = this.state
-    // state[key] = value
-    // this.setState(state)
+  handleChange = (e) => {
+    let key = e.target.name
+    let value = e.target.value
+    console.log(key, ": ", value)
+    this.setState({
+        [key]: value
+    });
+
   }
 
   render() {
@@ -81,23 +79,23 @@ export  class EventForm extends React.Component {
          <form className="event-form">
             <div className="form-group col-md-5">
              <label htmlFor="InputEmail">Event Name</label>
-             <input type="text" name="name" className="form-control name" id="InputName" placeholder="Name of your Event" value ={this.state.name} onChange={this.handleChange("name")} />
+             <input type="text" className="form-control name" name="name" placeholder="Name of your Event"  onChange={this.handleChange} />
            </div>
            <div className="form-group col-md-5">
              <label htmlFor="InputContact">Event Description</label>
-             <input type="text" name="description" className="form-control description" id="InputDescription" placeholder="Fill in Event Description" onChange={this.handleChange("description")} />
+             <input type="text"  className="form-control description" name="description" placeholder="Fill in Event Description" onChange={this.handleChange} />
            </div>
            <div className="form-group col-md-5">
              <label htmlFor="InputAddress">Venue</label>
-             <input type="text" name="venue" className="form-control address" id="InputVenue" placeholder="Venue" onChange={this.handleChange("venue")}/>
+             <input type="text" className="form-control address" name="venue" placeholder="Venue" onChange={this.handleChange}/>
            </div>
            <div className="form-group col-md-5">
              <label htmlFor="InputAddress">Start Date/Time </label>
-             <input type="text" name="starttime" className="form-control starttime" id="InputStartTime" placeholder="StartTime" onChange={this.handleChange("starttime")} />
+             <input type="text"  className="form-control starttime" name="starttime" placeholder="StartTime" onChange={this.handleChange} />
            </div>
             <div className="form-group col-md-5">
              <label htmlFor="InputAddress">End Date/Time </label>
-             <input type="text" name="endtime" className="form-control endtime" id="InputEndTime" placeholder="EndTime"  onChange={this.handleChange("endtime")}/>
+             <input type="text"  className="form-control endtime" placeholder="endtime"  onChange={this.handleChange}/>
            </div>
             <div className="form-group col-md-9  ">
                <button type="submit" onClick={this.handleSubmit} className="btn btn-primary">Create Event</button>
