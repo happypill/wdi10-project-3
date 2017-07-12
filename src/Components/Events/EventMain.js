@@ -15,13 +15,16 @@ import EventList from './EventList'
 //import EventDetails from '../EventDetails/EventDetails'
 import Sidebar from '../Sidebar/Sidebar'
 
+import './Events.css';
+
 class EventMain extends Component {
 
     constructor(props) {
     super(props);
 
     this.state = {
-      events: [{name: 'jack'}, {name: 'jill'}, {name: 'hill'}]
+      events: [
+        {name: 'jack', id: '2a', start: 'a', }, {name: 'jill', id: '2b'}, {name: 'hill', id: '2c'}]
     }
   }
 

@@ -6,7 +6,7 @@ class EventDetails extends Component {
     super(props);
 
     this.state = {
-      activeEvent: {}
+      activeEvent: this.props.event.id
     };
 
     this.renderLogo = this.renderLogo.bind(this);

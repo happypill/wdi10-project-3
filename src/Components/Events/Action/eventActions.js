@@ -1,6 +1,8 @@
+import axios from 'axios';
+
 export const EventConstants = {
-  REQUEST_EVENTS: "REQUEST_EVENTS",
-  REQUEST_EVENT: "REQUEST_EVENT",
+  // REQUEST_EVENTS: "REQUEST_EVENTS",
+  // REQUEST_EVENT: "REQUEST_EVENT",
   RECEIVE_EVENTS: "RECEIVE_EVENTS",
   RECEIVE_EVENT: "RECEIVE_EVENT",
   CREATE_EVENT: "CREATE_EVENT",
@@ -38,14 +40,29 @@ export const receiveEvent = (singleEvent) => ({
   singleEvent
 });
 
-export const requestEvents = () => ({
-  type: EventConstants.REQUEST_EVENTS
-});
+export const receiveEvent = () => {
+  return (dispatch) => {
+    axios.get({'/event/'+this.props.singleEvent.id})
+      .then( (response) => {
+        const singleEvent = response.data;
+        dispatch(receiveEvent(singleEvent));
+      })
+      .catch((error)=> {
+        console.error("AJAX: Could not get event @ '/auth/user'")
+        dispatch(updateUser({}));
+      });
+  };
+}
 
-export const requestEvent = (eventId) => ({
-  type: EventConstants.REQUEST_EVENT,
-  eventId
-});
+//
+// export const requestEvents = () => ({
+//   type: EventConstants.REQUEST_EVENTS
+// });
+//
+// export const requestEvent = (eventId) => ({
+//   type: EventConstants.REQUEST_EVENT,
+//   eventId
+// });
 
 export const deleteEvent = (eventData) => ({
   type: EventConstants.DELETE_EVENT,
@@ -74,4 +91,3 @@ export const createVenueAndUpdateEvent = (venueData, eventId, eventData) => ({
   eventId,
   eventData
 });
-Contact GitHub API Training Shop Blog About
