@@ -28,7 +28,7 @@ export  class Home extends React.Component {
           <SearchBar/>
             <Grid>
               <Row>
-               <div className="col-lg-3 col-md-3 col-sm-5 col-lg-push-1 col-md-push-1 ">
+               <div className="col-lg-2 col-md-3 col-sm-5  ">
                 <span>
                   <h3>fdfd</h3>
                   <h4>fdfdfd</h4>
@@ -48,7 +48,7 @@ export  class Home extends React.Component {
                   </div>
                 </span>
               </div>
-                <div className="col-lg-3 col-md-3 col-sm-5 col-lg-push-1 col-md-push-1 ">
+                <div className="col-lg-3 col-md-3 col-sm-5 col-lg- ">
                 <span>
                   <h3>fdfd</h3>
                   <h4>fdfdfd</h4>

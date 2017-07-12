@@ -3,12 +3,14 @@ import thunk from 'redux-thunk';
 
 
 import SearchReducer from './Reducers/searchReducer';
+import EventReducer from './Reducers/eventReducer';
 
 
 export let initStore = () => {
 
   const reducer = combineReducers({
-     search: SearchReducer
+     search: SearchReducer,
+     event: EventReducer
      
   });
 

@@ -2,13 +2,19 @@
 
 //data will be here before any tasks/actions happen. -- will load first
 
-const events = (state = [], action) => {
+const events = (state = {}, action) => {
 
   console.log(action);
 
   switch (action.type) {
     case "CREATE_EVENT":
+      let data = action.eventData;
+      return {
+        ...state,
+        data
+      }
       break;
+    
     case "READ_EVENT":
       break;
     case "JOIN_EVENT":
@@ -24,3 +30,4 @@ const events = (state = [], action) => {
       return state;
   }
 }
+
