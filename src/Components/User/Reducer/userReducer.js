@@ -11,7 +11,8 @@ const userReducer = (state = {}, action) => {
 // default state is being returned even if axios is not working
     case "CREATE_USER":
         return !user ? error="User already exists" || action.user;
-
+    case "JOIN_EVENT":
+        // return !user ? error="User already exists" || action.user;
         }
       break;
 

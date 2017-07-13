@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import  { connect } from 'react-redux';
+//import { joinEvent } from '../User/Action/userActions';
 
 class EventDetails extends Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class EventDetails extends Component {
       return logo.original.url
     } else {
       // placeholder image
-      return 'http://lorempixel.com/400/200/'
+      return 'http://www.jennybeaumont.com/wp-content/uploads/2015/03/placeholder.gif'
     }
   }
 
@@ -36,7 +37,11 @@ class EventDetails extends Component {
           <h4>Where: {event.venue.text}</h4>
         </div>
         <p>{event.description.text}</p>
+        <br/>
+        <button type="submit"
+                className="btn btn-success join">Join This Event</button>
       </div>
+
     )
   }
 }

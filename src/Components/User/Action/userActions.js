@@ -45,11 +45,31 @@ export const createUser = () => {
 }
 
 
-export const JOIN_EVENT=(event)=>{
+const joinEvent=(event)=>{
    return{
-      type:"FETCH_EVENTS",
+      type:"JOIN_EVENT",
       event
    }
+
+export const joinEvent=(event)=>{
+  return (dispatch) => {
+    // //get response from the link
+    // axios.post('/api/event/:id')
+    // //response coming from server
+    // //get response, otherwise get error
+    //   .then( (response) => {
+    //     //res.user is in response.data
+    //     const user = response.data;
+    //     //dispatch is synchronously dispatching action into Redux
+    //     dispatch(updateUser(user));
+    //   })
+    //   //error catching
+    //   .catch((error)=> {
+    //     console.error("AJAX: Could not get user @ '/auth/user'")
+    //     //on error, dispatch empty object
+    //     dispatch(updateUser({}));
+    //   });
+  };
 }
 export const REMOVE_EVENT=(event)=>{
    return{

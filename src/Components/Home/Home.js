@@ -19,15 +19,15 @@ export class Home extends React.Component {
     super(props);
 
     this.state = {
-      activeUser: this.props.user.id
+      activeUser: this.props.user
     };
   }
 
   render() {
       const user = this.props.activeUser;
-      if (!user ) {
-        return <h1>Welcome to Brace</h1>;
-      }
+      // if (!user ) {
+      //   return <h1>Welcome to Brace</h1>;
+      // }
 
     return (
       <div className="main">
@@ -35,13 +35,12 @@ export class Home extends React.Component {
           <br/>
           <br/>
           <br/>
-          <h1 className="welcometitle">Welcome to <b>Brace</b>, {user.name ? user.name || user.username || 'member'} </h1>
+          <h1 className="welcometitle">Welcome to <b>Brace</b></h1>
           <br/>
           <SearchBar/>
             <Grid>
               <Row>
               <hr/>
-                <p>THIS IS AN EVENT PAGE </p>
               </Row>
               <Row>
               <EventMain />

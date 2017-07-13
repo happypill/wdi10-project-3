@@ -2,11 +2,10 @@ import React, {Component, PropTypes} from 'react';
 import { Button, ButtonToolbar, Col } from 'react-bootstrap';
 import { bindActionCreators } from 'redux';
 import {connect} from 'react-redux';
+import axios from 'axios';
 
 import {selectEvent} from '../../Actions/search';
 import EventView from './EventView'
-
-
 
 
 class EventList extends Component {
@@ -14,20 +13,28 @@ class EventList extends Component {
     super(props);
 
     this.state = {
-      events: this.props.events
+      events: []
     };
 
     // this.renderEvents = this.renderEvents.bind(this);
     // this.renderLogo = this.renderLogo.bind(this);
   }
-  renderLogo = (logo) => {
-    if (logo !== null) {
-      return logo.original.url
-    } else {
-      // placeholder image
-      return 'http://www.jennybeaumont.com/wp-content/uploads/2015/03/placeholder.gif'
-    }
+  componentDidMount() {
+
+    console.log("EventList.componentDidMount");
+
+    axios.get('/api/')
+      .then( (response) => {
+        console.log(response);
+        this.setState({
+          events: response.data
+        });
+      })
+      .catch((error)=> {
+        console.log(error);
+      });
   }
+
 
   renderEvents = (event, index) => {
     console.log('render event')
@@ -39,7 +46,7 @@ class EventList extends Component {
 
   render() {
     console.log(this.state.events)
-        const events = this.props.events.map(this.renderEvents);
+        const events = this.state.events.map(this.renderEvents);
     return (
 
 
