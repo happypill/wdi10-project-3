@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import merge from 'lodash/merge';
 import Header from '../Header/header'
 import { reduxForm } from 'redux-form';
-import * as EventActions from '../../Actions/eventActions';
+import * as EventActions from '../Events/Action/eventActions';
 
 
 const newEventState = {
@@ -38,8 +38,8 @@ export  class EventForm extends React.Component {
   constructor(props) {
     super(props);
     this.state=newEventState;
-    
-   
+
+
   }
    handleSubmit=(event) => {
     if (event) {
@@ -52,11 +52,10 @@ export  class EventForm extends React.Component {
       description: this.state.description,
       venue:this.state.venue,
       start_time :this.state.start_time,
-      end_time : this.state.end_time,
-      details: this.state.details
+      end_time : this.state.end_time
     };
      this.props.createEvent(stagedEvent);
- 
+
   }
   handleChange = (e) => {
     let key = e.target.name
@@ -76,39 +75,32 @@ export  class EventForm extends React.Component {
        <br/>
        <br/>
        <br/>
-
       <Col md={7} mdOffset={1} id="Post">
-
          <form className="event-form">
-         <h2>Create Event</h2>
-            <div className="form-group col-md-4">
-             <label htmlFor="Inputname">Event Name</label>
+            <div className="form-group col-md-5">
+             <label htmlFor="InputEmail">Event Name</label>
              <input type="text" className="form-control name" name="name" placeholder="Name of your Event"  onChange={this.handleChange} />
            </div>
-           <div className="form-group col-md-4">
-             <label htmlFor="InputDescription">Event Description</label>
+           <div className="form-group col-md-5">
+             <label htmlFor="InputContact">Event Description</label>
              <input type="text"  className="form-control description" name="description" placeholder="Fill in Event Description" onChange={this.handleChange} />
            </div>
-           <div className="form-group col-md-4">
-             <label htmlFor="InputVenue">Venue</label>
+           <div className="form-group col-md-5">
+             <label htmlFor="InputAddress">Venue</label>
              <input type="text" className="form-control address" name="venue" placeholder="Venue" onChange={this.handleChange}/>
            </div>
-           <div className="form-group col-md-4">
-             <label htmlFor="InputDetails">Details</label>
-             <input type="text" className="form-control" name="details" placeholder="Details" onChange={this.handleChange} />
-           </div>
-           <div className="form-group col-md-4">
-             <label htmlFor="StartDate">Start Date/Time </label>
+           <div className="form-group col-md-5">
+             <label htmlFor="InputAddress">Start Date/Time </label>
              <input type="text"  className="form-control starttime" name="starttime" placeholder="StartTime" onChange={this.handleChange} />
            </div>
-            <div className="form-group col-md-4">
-             <label htmlFor="EndDate">End Date/Time </label>
+            <div className="form-group col-md-5">
+             <label htmlFor="InputAddress">End Date/Time </label>
              <input type="text"  className="form-control endtime" placeholder="endtime"  onChange={this.handleChange}/>
            </div>
-            <div className="form-group col-md-9">
+            <div className="form-group col-md-9  ">
                <button type="submit" onClick={this.handleSubmit} className="btn btn-primary">Create Event</button>
            </div>
-           
+
 
           </form>
         </Col>
@@ -126,10 +118,11 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => ({
   createEvent: (eventData) => dispatch(EventActions.createEvent(eventData)),
-  
+
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(EventForm);
+

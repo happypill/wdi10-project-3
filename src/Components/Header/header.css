@@ -14,3 +14,7 @@
 .navbar-default .navbar-brand:focus {
     color: #5E5E5E;
 }
+.logout {
+  padding: 0;
+
+}

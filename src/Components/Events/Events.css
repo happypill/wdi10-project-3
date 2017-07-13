@@ -1,6 +1,13 @@
-.eventviewtitle {
-  font-size: 12px;
+#eventsList {
+  position: center;
+  width: 80vw;
+  overflow-y: scroll;
 
+}
+
+.eventviewtitle {
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .eventview {

@@ -1,25 +1,19 @@
 import React, { Component } from 'react';
 import  { connect } from 'react-redux';
+//import { joinEvent } from '../User/Action/userActions';
 
 class EventDetails extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      activeEvent: this.props.event.id
+      activeEvent: this.props.event._id
     };
 
     this.renderLogo = this.renderLogo.bind(this);
   }
 
-  renderLogo(logo) {
-    if (logo !== null) {
-      return logo.original.url
-    } else {
-      // placeholder image
-      return 'http://lorempixel.com/400/200/'
-    }
-  }
+
 
   render() {
     const event = this.props.activeEvent;
@@ -36,7 +30,11 @@ class EventDetails extends Component {
           <h4>Where: {event.venue.text}</h4>
         </div>
         <p>{event.description.text}</p>
+        <br/>
+        <button type="submit"
+                className="btn btn-success join">Join This Event</button>
       </div>
+
     )
   }
 }

@@ -10,17 +10,21 @@ Any Events type , you add it here. This is just a container
 import React, { Component } from 'react';
 import  { connect } from 'react-redux';
 import axios from 'axios';
+import SearchBar from '../Search/Search'
 import EventList from './EventList'
-import EventDetail from './EventDetail'
+//import EventDetails from '../EventDetails/EventDetails'
+import Sidebar from '../Sidebar/Sidebar'
 
+import './Events.css';
 
 class EventMain extends Component {
-   
+
     constructor(props) {
     super(props);
 
     this.state = {
-
+      events: [
+        {name: 'jack', id: '2a', start: 'a', }, {name: 'jill', id: '2b'}, {name: 'hill', id: '2c'}]
     }
   }
 
@@ -47,17 +51,18 @@ class EventMain extends Component {
     const event = this.props.activeEvent;
 
     if (event !== null) {
-      return <EventDetail />
+      // return <EventDetail />
+      return <EventList events={this.state.events}/>
     }
-    return <EventList />
+    return <EventList events={this.state.events}/>
   }
 
   render() {
     return (
-        <div id="eventsView">
+        <div id="eventsList">
           {this.renderEventsView()}
 
-          </div>
+        </div>
     );
   }
 }

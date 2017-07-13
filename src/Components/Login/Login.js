@@ -56,10 +56,11 @@ export class Login extends Component { // eslint-disable-line react/prefer-state
   }
 
   localSignup = (e) => {
+    console.log('hihii');
     e.preventDefault();
     axios.post('/auth/signup', this.state)
       .then( (response) => {
-
+        console.log('ji');
         let data = response.data;
         if(data.error){
           console.log(data.message)
@@ -83,6 +84,7 @@ export class Login extends Component { // eslint-disable-line react/prefer-state
   facebookLogin = (e) => {
     e.preventDefault();
     window.location.href = "/auth/facebook";
+
   }
 
   googleLogin = (e) => {
@@ -125,13 +127,18 @@ export class Login extends Component { // eslint-disable-line react/prefer-state
                   className="btn btn-default submit"
                   onClick={this.localSignup}>Sign up</button>
           <div className="or">or</div>
+          <div className="row">
+          <div className="col-md-4">
           <button type="submit"
                   className="btn btn-primary facebook"
-                  onClick={this.facebookLogin}>Login with Facebook</button>
-          <div className="or">or</div>
+                  onClick={this.facebookLogin}>Login with Facebook</button></div>
+          <div className="or col-md-4">or</div>
+          <div className="col-md-4">
           <button type="submit"
-                  className="btn btn-primary google"
+                  className="btn btn-danger google"
                   onClick={this.facebookLogin}>Login with Google</button>
+            </div>
+          </div>
         </form>
       </div>
      </div>
