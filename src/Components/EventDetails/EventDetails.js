@@ -32,7 +32,7 @@ class EventDetails extends Component {
         <img src={this.renderLogo(event.logo)}/>
         <div className="event-summary">
           <h2>{event.name.text}</h2>
-          <h4>When: {event.start.local} - {event.end.local}</h4>
+          <h4>When: {event.start.local} - {event.end.local}</h4><br />
           <h4>Where: {event.venue.text}</h4>
         </div>
         <p>{event.description.text}</p>

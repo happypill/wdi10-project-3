@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { Button, ButtonToolbar, Col ,Row,Grid} from 'react-bootstrap';
 
+
 //Import Child Compoonents
 
 
@@ -13,12 +14,21 @@ import Header from '../Header/header'
 import './Home.css';
 
 
-export  class Home extends React.Component {
+export class Home extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      activeUser: this.props.user.id
+    };
   }
 
   render() {
+      const user = this.props.activeUser;
+      if (!user ) {
+        return <h1>Welcome to Brace</h1>;
+      }
+
     return (
       <div className="main">
         <Header />
@@ -28,7 +38,7 @@ export  class Home extends React.Component {
           <SearchBar/>
             <Grid>
               <Row>
-                <h1>WELCOME</h1>
+                <h1>Welcome to Brace, {user.name ? user.name || user.username || 'member'} </h1>
                 <hr/>
                 <p>THIS IS A EVENT PAGE </p>
               </Row>
@@ -44,7 +54,7 @@ export  class Home extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-
+      activeUser: state.activeUser,
     }
 }
 
