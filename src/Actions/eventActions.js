@@ -1,3 +1,6 @@
+
+import axios from 'axios';
+
 export const EventConstants = {
   REQUEST_EVENTS: "REQUEST_EVENTS",
   REQUEST_EVENT: "REQUEST_EVENT",
@@ -6,12 +9,36 @@ export const EventConstants = {
   CREATE_EVENT: "CREATE_EVENT",
   UPDATE_EVENT: "UPDATE_EVENT",
   DELETE_EVENT: "DELETE_EVENT",
-  TOGGLE_BOOKMARK: "TOGGLE_BOOKMARK",
-  RECEIVE_BOOKMARK_EVENT: "RECEIVE_BOOKMARK_EVENT",
   CREATE_VENUE_AND_EVENT: "CREATE_VENUE_AND_EVENT",
   CREATE_VENUE_AND_UPDATE_EVENT: "CREATE_VENUE_AND_UPDATE_EVENT",
-  RESET_EVENT_FORM: "RESET_EVENT_FORM"
+  RESET_EVENT_FORM: "RESET_EVENT_FORM",
+  LOADING_EVENT_ERROR :"LOADING_EVENT_ERROR"
 };
+
+export const addEvent = (eventData) => {
+  console.log('Event Created', eventData)
+  return (dispatch) => {
+
+    let storeinBackEnd = new FormData();
+    console.log('Event Created', eventData)
+
+
+    axios.post('/api/event', storeinBackEnd)
+      .then( (response) => {
+        console.log(response.data)
+        dispatch(createEvent(response.data))
+      })
+      .catch((error) =>{
+        dispatch(loadingEventError(error))
+      })
+  }
+}
+export const loadingEventError = (error) => {
+  return {
+    type: EventConstants.LOADING_EVENT_ERROR,
+    error
+  }
+}
 
 export const resetEventForm = () => ({
   type: EventConstants.RESET_EVENT_FORM
@@ -52,15 +79,6 @@ export const deleteEvent = (eventData) => ({
   eventData
 });
 
-export const toggleBookmark = (eventId) => ({
-  type: EventConstants.TOGGLE_BOOKMARK,
-  eventId
-});
-
-export const receiveBookmarkEvent = (eventData) => ({
-  type: EventConstants.RECEIVE_BOOKMARK_EVENT,
-  eventData
-});
 
 export const createVenueAndEvent = (venueData, eventData) => ({
   type: EventConstants.CREATE_VENUE_AND_EVENT,

@@ -7,20 +7,13 @@ class EventDetails extends Component {
     super(props);
 
     this.state = {
-      activeEvent: this.props.event.id
+      activeEvent: this.props.event._id
     };
 
     this.renderLogo = this.renderLogo.bind(this);
   }
 
-  renderLogo(logo) {
-    if (logo !== null) {
-      return logo.original.url
-    } else {
-      // placeholder image
-      return 'http://www.jennybeaumont.com/wp-content/uploads/2015/03/placeholder.gif'
-    }
-  }
+
 
   render() {
     const event = this.props.activeEvent;
