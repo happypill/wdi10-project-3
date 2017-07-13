@@ -1,10 +1,7 @@
 import { createStore, compose, combineReducers, applyMiddleware} from 'redux'; 
 import thunk from 'redux-thunk';
-
-
 import SearchReducer from './Reducers/searchReducer';
 import EventReducer from './Reducers/eventReducer';
-
 
 export let initStore = () => {
 
