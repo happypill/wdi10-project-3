@@ -7,16 +7,24 @@ import { Button, ButtonToolbar, Col ,Row,Grid} from 'react-bootstrap';
 
 import EventMain from '../Events/EventMain'
 import Header from '../Header/header'
-
+import SearchBar from '../Search/Search'
 import './Home.css';
 
 
 export  class Home extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      activeUser: this.props.activeUser
+    };
   }
 
   render() {
+    // const user = this.props.activeUser;
+    //   if (!user ) {
+    //     return <h1>Welcome to Brace</h1>;
+    //   }
     return (
       <div className="main">
         <Header />
@@ -28,7 +36,7 @@ export  class Home extends React.Component {
                <div className="col-lg-2 col-md-3 col-sm-5  ">
                 <span>
                   <h3>fdfd</h3>
-                  <h4>fdfdfd</h4>
+                  <h1>Welcome to Brace</h1>
                   <div className="event">
                     <h5>Event </h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -194,7 +202,7 @@ export  class Home extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-
+       activeUser: state.activeUser
     }
 }
 

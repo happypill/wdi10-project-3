@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import {connect} from 'react-redux';
 
 import {selectEvent} from '../../Actions/search';
-
+import EventView from './EventView'
 
 
 
@@ -27,9 +27,16 @@ class EventList extends Component {
       return 'http://www.jennybeaumont.com/wp-content/uploads/2015/03/placeholder.gif'
     }
   }
-
+  renderEvents = (event, index) => {
+   console.log('render event')
+   return (
+     <EventView event={event} index={index}/>
+   )
+ }
 
   render() {
+    console.log(this.state.events)
+    const events = this.props.events.map(this.renderEvents);
     return (
 
 
@@ -38,7 +45,7 @@ class EventList extends Component {
           {this.props.events.map(this.renderEvents)}
         </div>
       </section>
-        
+
     );
   }
 }
@@ -46,7 +53,7 @@ class EventList extends Component {
 const mapStateToProps = (state) => {
 
     return { events: state.events };
-    
+
 }
 
 function mapDispatchToProps(dispatch) {
@@ -54,4 +61,3 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(EventList);
-
