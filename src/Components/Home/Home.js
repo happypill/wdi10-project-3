@@ -35,12 +35,13 @@ export class Home extends React.Component {
           <br/>
           <br/>
           <br/>
+          <h1 className="welcometitle">Welcome to <b>Brace</b>, {user.name ? user.name || user.username || 'member'} </h1>
+          <br/>
           <SearchBar/>
             <Grid>
               <Row>
-                <h1>Welcome to Brace, {user.name ? user.name || user.username || 'member'} </h1>
-                <hr/>
-                <p>THIS IS A EVENT PAGE </p>
+              <hr/>
+                <p>THIS IS AN EVENT PAGE </p>
               </Row>
               <Row>
               <EventMain />

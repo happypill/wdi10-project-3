@@ -45,7 +45,7 @@ class EventList extends Component {
 
    <section id="event-list">
         <div className="container2">
-          {events}
+          <ul>{events}</ul>
         </div>
       </section>
 
@@ -53,16 +53,16 @@ class EventList extends Component {
   }
 }
 
-// const mapStateToProps = (state) => {
-//
-//     return { events: state.events };
-//
-// }
-//
-// function mapDispatchToProps(dispatch) {
-//   return bindActionCreators({ selectEvent: selectEvent }, dispatch)
-// }
-//
-// export default connect(mapStateToProps,mapDispatchToProps)(EventList);
+const mapStateToProps = (state) => {
 
-export default EventList
+    return { events: state.events };
+
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ selectEvent: selectEvent }, dispatch)
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(EventList);
+
+// export default EventList

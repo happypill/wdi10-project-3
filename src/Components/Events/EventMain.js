@@ -59,7 +59,7 @@ class EventMain extends Component {
 
   render() {
     return (
-        <div id="eventsView">
+        <div id="eventsList">
           {this.renderEventsView()}
 
         </div>

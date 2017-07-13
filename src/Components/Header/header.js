@@ -30,17 +30,16 @@ class Header extends Component {
       <Navbar bsClass="navbar" fixedTop fluid collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="#"><Link to='/'>BRACE</Link></a>
+            <Link to='/'>BRACE</Link>
           </Navbar.Brand>
           <Navbar.Toggle/>
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav>
-            <NavItem eventKey={1} href="#"><Link to='/'>Home</Link></NavItem>
-            <NavItem eventKey={2} href="#"><Link to='/Login'>Login / Signup</Link></NavItem>
-            <NavItem eventKey={2} href="#"><Link to='/EventForm'>EventForm</Link></NavItem>
-            <NavItem eventKey={2} href="#"><Link to='/EventDetail'>EventDetail</Link></NavItem>
-            <NavItem type="button" className="btn btn-danger pull-right"
+          <NavItem eventKey={1}><Link to='/'>Home</Link></NavItem>
+          <NavItem eventKey={2}><Link to='/Login'>Login</Link></NavItem>
+          <NavItem eventKey={3}><Link to='/EventForm'>Create An Event</Link></NavItem>
+            <NavItem type="button" className="btn btn-danger pull-right logout"
                     onClick={ this.logout }>Logout</NavItem>
           </Nav>
         </Navbar.Collapse>
