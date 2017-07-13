@@ -6,13 +6,6 @@ const loadEvents = (events) => {
     events
   }
 }
-
-
-
-
-
-
-
 const events = (state = {}, action) => {
 
   console.log(action);
@@ -24,8 +17,7 @@ const events = (state = {}, action) => {
         ...state,
         data
       }
-      break;
-    
+      break;    
     case "READ_EVENT":
         return{
 
@@ -37,7 +29,6 @@ const events = (state = {}, action) => {
       break;
     case "DELETE_EVENT":
       break;
-//entire list of events in database. going to be asynchronous
     case "INIT_EVENT":
       break;
     default:

@@ -3,8 +3,7 @@ import { Component } from 'react';
 import {connect} from 'react-redux';
 import { Button, ButtonToolbar, Col ,Row,Grid} from 'react-bootstrap';
 import { bindActionCreators } from 'redux';
-import {fetchEvents} from '../../Actions/search';
-import {selectEvent} from '../../Actions/search';
+
 
 
 
@@ -27,9 +26,7 @@ export class Search extends Component {
 
   onFormSubmit(event) {
     event.preventDefault();
-    
-    this.props.fetchEvents(this.state.term);
-    this.props.selectEvent(null)
+  
   }
 
 
@@ -39,9 +36,7 @@ export class Search extends Component {
       <form onSubmit="" className="input-group"onSubmit={(e) => this.onFormSubmit(e) }>
         <input
           placeholder="Search for events"
-          className="form-control"
-          value={this.state.term}
-          onChange={this.onInputChange} />
+          className="form-control"/>
         <span className="input-group-btn">
           <button type="submit" className="btn btn-secondary search-btn">Search</button>
         </span>
@@ -59,7 +54,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchEvents, selectEvent }, dispatch);
+  return bindActionCreators({  }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Search);

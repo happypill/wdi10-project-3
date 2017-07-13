@@ -1,7 +1,3 @@
-
-
-//data will be here before any tasks/actions happen. -- will load first
-
 const users = (state = [], action) => {
 
   console.log(action);

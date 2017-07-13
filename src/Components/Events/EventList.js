@@ -2,8 +2,6 @@ import React, {Component, PropTypes} from 'react';
 import { Button, ButtonToolbar, Col } from 'react-bootstrap';
 import { bindActionCreators } from 'redux';
 import {connect} from 'react-redux';
-
-import {selectEvent} from '../../Actions/search';
 import EventView from './EventView'
 
 
@@ -57,7 +55,7 @@ const mapStateToProps = (state) => {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ selectEvent: selectEvent }, dispatch)
+  return bindActionCreators({ }, dispatch)
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(EventList);

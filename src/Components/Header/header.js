@@ -8,9 +8,7 @@ import './header.css';
 
 class Header extends Component {
 
-
   render() {
-
     return (
       <Navbar bsClass="navbar" fixedTop fluid collapseOnSelect>
         <Navbar.Header>
