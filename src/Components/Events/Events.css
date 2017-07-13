@@ -1,0 +1,12 @@
+.eventviewtitle {
+  font-size: 12px;
+
+}
+
+.eventview {
+  border-style: 1px black solid;
+}
+
+.eventview p {
+  color: rgba(100,100,100,0.7);
+}

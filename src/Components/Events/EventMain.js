@@ -10,10 +10,9 @@ Any Events type , you add it here. This is just a container
 import React, { Component } from 'react';
 import  { connect } from 'react-redux';
 import axios from 'axios';
-import SearchBar from '../Search/Search'
 import EventList from './EventList'
 import EventDetail from './EventDetail'
-import Sidebar from '../Sidebar/Sidebar'
+
 
 class EventMain extends Component {
    
